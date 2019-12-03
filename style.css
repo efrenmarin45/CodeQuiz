@@ -30,7 +30,7 @@ body{
     font-size: 38px;
     font-weight: bold;
 }
-.timer{
+.timer, .timerTitle{
     grid-column-start: 12;
     grid-column-end: 12;
     grid-row-start: 1;

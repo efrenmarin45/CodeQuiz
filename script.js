@@ -19,3 +19,7 @@ startQuizElement.addEventListener("click", function(){
     setTime();
 })
 
+function sendMessage(){
+    //TODO Reference the 'Game Over' screen when timer runs out
+}
+

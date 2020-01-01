@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz</title>
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <button type="button" id="highscore" class="btn btn-primary">View Highscores!</button>
-        <div class="title">Code Quiz</div>
-        <div class="timerTitle">Timer: <span class="timer">00</span></div>
-        <p class="intro"><br>As a coding bootcamp student
-                I want to take a timed quiz on JavaScript fundamentals that stores high scores
-                so that I can gauge my progress compared to my peers.<br><br> Help test out your knowledge by
-                taking this Code Quiz!
-                </p>
-        <button type="button" id="start-quiz" class="btn btn-success">Start Quiz!</button>
-        <!-- !Need to figure out where to place questions dynamically -->
-        <!-- ?Would we use modals? Need to look into this. -->
-        <!-- <div class="answer-button">
+      <button type="button" id="highscore" class="btn btn-primary">
+        View Highscores!
+      </button>
+      <div class="title">Code Quiz</div>
+      <div class="timerTitle">Timer: <span class="timer">00</span></div>
+      <div class="wrapper">
+        <div class="start-screen">
+          <p class="intro">
+            <br />As a coding bootcamp student I want to take a timed quiz on
+            JavaScript fundamentals that stores high scores so that I can gauge
+            my progress compared to my peers.<br /><br />
+            Help test out your knowledge by taking this Code Quiz!
+          </p>
+          <button type="button" id="start-quiz" class="btn btn-success">
+            Start Quiz!
+          </button>
+        </div>
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+        <div id="end-screen" class="hide">
+            <h2>All Done</h2>
+            <p>Your final Score id <span id="final-score"></span></p>
+            <p>Enter Name: <input type="text" id="username" max="10 /">
+            <button id="submit">Submit</button></p>
+
+        </div>
+      </div>
+
+      <!-- !Need to figure out where to place questions dynamically -->
+      <!-- ?Would we use modals? Need to look into this. -->
+      <!-- <div class="answer-button">
             <button id="btn1"><span id="choice1"></span></button>
             <button id="btn2"><span id="choice2"></span></button>
             <button id="btn3"><span id="choice3"></span></button>
             <button id="btn4"><span id="choice4"></span></button>
         </div> -->
     </div>
-    <script src="script.js"></script>
-</body>
+    <script src="./JS Files/script.js"></script>
+    <script src="./JS Files/questions.js"></script>
+  </body>
 </html>

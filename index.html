@@ -17,14 +17,10 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Code Quiz</span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="timerTitle hide">Timer: <span class="timer">00</span></div>
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" id="highscore" href="#">Highscores</a>
-            <div class="timerTitle">Timer: <span class="timer">00</span></div>
           </div>
         </div>
       </nav>
@@ -47,11 +43,10 @@
             <div id="choices" class="choices"></div>
         </div>
         <div id="end-screen" class="hide">
-            <h2>All Done</h2>
-            <p>Your final Score id <span id="final-score"></span></p>
+            <h2>All Done!</h2>
+            <p>Your final Score is <span id="final-score"></span></p>
             <p>Enter Name: <input type="text" id="username" max="10 /">
             <button id="submit">Submit</button></p>
-
         </div>
       </div>
     </div>

@@ -11,3 +11,6 @@ The project is currently still being worked on to finish out the local storage f
 ## WIP Demo
 ![Code Quiz Demo](codequiz_demo.gif)
 
+No licenses. Creative purposes only. @Efrenmarin45 on GitHub.
+
+https://efrenmarin45.github.io/CodeQuiz/

@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz</title>
-
     <script src="https://code.jquery.com/jquery.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Code Quiz</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" id="highscore" href="#">Highscores</a>
+            <div class="timerTitle">Timer: <span class="timer">00</span></div>
+          </div>
+        </div>
+      </nav>
     <div class="container">
-      <button type="button" id="highscore" class="btn btn-primary">
-        View Highscores!
-      </button>
       <div class="title">Code Quiz</div>
-      <div class="timerTitle">Timer: <span class="timer">00</span></div>
       <div class="wrapper">
         <div class="start-screen">
           <p class="intro">
@@ -46,15 +54,6 @@
 
         </div>
       </div>
-
-      <!-- !Need to figure out where to place questions dynamically -->
-      <!-- ?Would we use modals? Need to look into this. -->
-      <!-- <div class="answer-button">
-            <button id="btn1"><span id="choice1"></span></button>
-            <button id="btn2"><span id="choice2"></span></button>
-            <button id="btn3"><span id="choice3"></span></button>
-            <button id="btn4"><span id="choice4"></span></button>
-        </div> -->
     </div>
     <script src="./JS Files/script.js"></script>
     <script src="./JS Files/questions.js"></script>

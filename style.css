@@ -1,29 +1,10 @@
 body{
     margin: 10px;
 }
-
 .container{
-    display: grid;
     width: auto;
-    grid-template-columns: 50px 45px 5px;
-    grid-gap: 5px;
-}
-#highscore{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    border-radius: 5px;
-    padding: 10px;
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
 }
 .title{
-    grid-column-start: 7;
-    grid-column-end: 8;
-    grid-row-start: 1;
-    grid-row-end: 2;
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -31,12 +12,8 @@ body{
     font-weight: bold;
 }
 .timer, .timerTitle{
-    grid-column-start: 12;
-    grid-column-end: 12;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    border-radius: 25px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 5px;
     background-color: crimson;
     color: white;
     text-align: start;
@@ -44,22 +21,23 @@ body{
     border-style: solid;
     border-width: 2px;
 }
+.timer{
+    border: 0px;
+}
 #start-quiz{
-    grid-column-start: 7;
-    grid-column-end: 8;
-    grid-row-start: 3;
-    grid-row-end: 4;
     padding: 15px;
     font-size: 38px;
     border-width: 2px;
     border-color: black;
     border-radius: 5px;
+    justify-self:start;
+    text-align: center;
+}
+.wrapper{
+    justify-self:start;
+    text-align: center;
 }
 .intro{
-    grid-column-start: 7;
-    grid-column-end: 8;
-    grid-row-start: 2;
-    grid-row-end: 3;
     justify-self:start;
     text-align: center;
     font-size: 28px;

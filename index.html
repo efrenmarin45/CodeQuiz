@@ -17,31 +17,42 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Code Quiz</span>
-        <div class="timerTitle hide">Timer: <span class="timer">00</span></div>
+        <div class="hide" id="timerTitle">Timer: <span class="timer">00</span></div>
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" id="highscore" href="#">Highscores</a>
+            <a class="nav-item nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" id="highscore" href="./highscores.html">Highscores</a>
           </div>
         </div>
       </nav>
+
+
+    <!-- Start screen -->
     <div class="container">
       <div class="title">Code Quiz</div>
       <div class="wrapper">
         <div class="start-screen">
           <p class="intro">
-            <br />As a coding bootcamp student I want to take a timed quiz on
-            JavaScript fundamentals that stores high scores so that I can gauge
-            my progress compared to my peers.<br /><br />
-            Help test out your knowledge by taking this Code Quiz!
-          </p>
+            <br />Harry is starting school soon at the castle and needs help with some questions! Help Harry 
+            understand the magic behind a couple HTML, CSS, and JavaScript questions. Harry also likes challenges
+            so for every wrong answer, you'll be deducted 10 seconds.<br/><br/>
+            To help Harry test out his knowledge by taking this Code Quiz, click the Start button!
+          </p><br>
           <button type="button" id="start-quiz" class="btn btn-success">
             Start Quiz!
           </button>
         </div>
+
+
+        <!-- Begin questions -->
         <div id="questions" class="hide">
             <h2 id="question-title"></h2>
             <div id="choices" class="choices"></div>
+            <hr>
+            <div id="answer-result" class="hide"></div>
         </div>
+
+
+        <!-- Game Over Screen -->
         <div id="end-screen" class="hide">
             <h2>All Done!</h2>
             <p>Your final Score is <span id="final-score"></span></p>
@@ -50,6 +61,8 @@
         </div>
       </div>
     </div>
+
+
     <script src="./JS Files/script.js"></script>
     <script src="./JS Files/questions.js"></script>
   </body>

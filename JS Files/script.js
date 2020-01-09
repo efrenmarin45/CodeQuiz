@@ -8,7 +8,7 @@ var time = questions.length * 13;
 
 
 //Sets up timer
-function setTime() {
+function setTime(){
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timerElement.textContent = secondsLeft;
@@ -39,7 +39,7 @@ startQuizElement.addEventListener("click", function() {
 
 
 //Cycles through the questions
-function getQuestion() {
+function getQuestion(){
     console.log("questions:" + JSON.stringify(questions))
     console.log("index: " + currentQuestionIndex)
   var currentQuestion = questions[currentQuestionIndex];
@@ -86,7 +86,7 @@ function choiceClick(){
 
 
 //Ends the Quiz
-function endQuiz() {
+function endQuiz(){
   clearInterval(timerInterval);
   var gameover = document.getElementById("end-screen");
   gameover.removeAttribute("class");

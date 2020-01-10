@@ -6,7 +6,7 @@ body{
     width: auto;
 }
 
-.title{
+#title{
     border-radius: 5px;
     padding: 10px;
     text-align: center;
@@ -38,6 +38,10 @@ body{
     border-radius: 5px;
     justify-self:start;
     text-align: center;
+}
+
+#retryQuiz{
+    border-radius: 15px;
 }
 
 .choice{

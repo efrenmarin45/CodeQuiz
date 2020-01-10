@@ -58,5 +58,46 @@ var questions = [
     title: "If we want to use a nice looking green dotted border around an image, which css property will we use?",
     choices: ["border-color", "border-style", "border-decoration", "border-line"],
     answer: "border-style"
-  }
+  },
+  {
+    title: "What is the correct HTML tag for the largest heading?",
+    choices: ["<head>", "<header>", "<h6>", "<h1>"],
+    answer: "<h1>"
+  },
+  {
+    title: "What is the correct way for referring to an external style sheet in an HTML file?",
+    choices: ['<style src="mystyle.css">', '<link rel="stylesheet" type="text/css" href="mystyle.css">', '<stylesheet>mystyle.css</stylesheet>', '<link src="stylesheet" type="text/css" href="mystyle.css">'],
+    answer: '<link rel="stylesheet" type="text/css" href="mystyle.css">'
+  },  
+  {
+    title: "Correct place to refer to an external style sheet in HTML document?",
+    choices: ["In the <head> section", "In the <body> section", "At the start of the document", "At the end of the document"],
+    answer: "In the <head> section"
+  },
+  {
+    title: "How do you change the text color of an element?",
+    choices: ["text-color=", "element-color:", "color:", "text-color:"],
+    answer: "color:"
+  },
+  {
+    title: "Which method of an Array object adds and/or removes elements from an array.",
+    choices: ["Reverse", "Slice", "Shift", "Splice"],
+    answer: "Splice"
+  },
+  {
+    title: "JavaScript Code can be called by using: ",
+    choices: ["RMI", "Triggering Event", "Preprocessor", "Function/Method"],
+    answer: "Function/Method"
+  },
+  {
+    title: "The snippet that has to be used to check if “a” is not equal to “null” is",
+    choices: ["if(a!=null)", "if (!a)", "if(a!null)", "if(a!==null)"],
+    answer: "if(a!==null)"
+  },
+  {
+    title: "The statement a===b refers to",
+    choices: ["Both a and b are equal in value, type and reference address", "Both a and b are equal in value", 
+    "Both a and b are equal in value and type", "There is no such statement"],
+    answer: "Both a and b are equal in value and type"
+  },
 ];

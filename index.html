@@ -17,10 +17,12 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Code Quiz</span>
-        <div class="hide" id="timerTitle">Timer: <span class="timer">00</span></div>
+        <div id="timerButton">
+          <div class="hide" id="timerTitle">Timer: <span class="timer">00</span></div>
+        </div>
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="CodeQuiz">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" id="highscore" href="./highscores.html">Highscores</a>
+            <a class="nav-item nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <!-- <a class="nav-item nav-link" id="highscore" href="./highscores.html">Highscores</a> -->
           </div>
         </div>
       </nav>
@@ -28,13 +30,14 @@
 
     <!-- Start screen -->
     <div class="container">
-      <div class="title">Code Quiz</div>
+      <div id="title">Code Quiz</div>
       <div class="wrapper">
         <div class="start-screen">
           <p class="intro">
             <br />Harry is starting school soon at the castle and needs help with some questions! Help Harry 
             understand the magic behind a couple HTML, CSS, and JavaScript questions. Harry also likes challenges
-            so for every wrong answer, you'll be deducted 10 seconds.<br/><br/>
+            so for every wrong answer, you'll be deducted 10 seconds and for every right answer you'll receive +5
+            points.<br/><br/>
             To help Harry test out his knowledge by taking this Code Quiz, click the Start button!
           </p><br>
           <button type="button" id="start-quiz" class="btn btn-success">
@@ -54,10 +57,17 @@
 
         <!-- Game Over Screen -->
         <div id="end-screen" class="hide">
-            <h2>All Done!</h2>
-            <p>Your final Score is <span id="final-score"></span></p>
-            <p>Enter Name: <input type="text" id="username" max="10 /">
-            <button id="submit">Submit</button></p>
+            <h2>Pencils Down!</h2>
+            <h3>Thanks for helping Harry.</h3>
+            <br>
+            <h4>Your final Score is <span id="final-score"></span></h4>
+            <br>
+            <!-- <p>Enter Name: <input type="text" id="username" max="10 /">
+            <button id="submit">Submit</button></p> -->
+            <!-- <br> -->
+            <button type="button" id="retryQuiz" class="btn btn-warning">
+              Try Again?
+            </button>
         </div>
       </div>
     </div>

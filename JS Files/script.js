@@ -1,17 +1,24 @@
-const timerElement = document.querySelector(".timer");
-const startQuizElement = document.querySelector("#start-quiz");
+var timerElement = document.querySelector(".timer");
+var startQuizElement = document.querySelector("#start-quiz");
+var retryQuiz = document.getElementById("retryQuiz");
+var answerResponse = document.getElementById("answer-result");
+var hideTimer = document.getElementById("timerButton");
+var playerName = document.getElementById("username");
+var submitBtn = document.getElementById("submit");
 
-var secondsLeft = 90;
+var secondsLeft = 100;
 var score = 0;
 var currentQuestionIndex = 0;
-var time = questions.length * 13;
-const timerInterval = 0;
-const questionsEl = "";
-
+var currentQuestion = "";
+var time = questions.length * 20;
+var timerInterval = 0;
+var questionsEl = "";
+var hideTimer = "";
+var quizScore = 0;
 
 //Sets up timer
 function setTime(){
-  const timerInterval = setInterval(function() {
+  var timerInterval = setInterval(function() {
     secondsLeft--;
     timerElement.textContent = secondsLeft;
 
@@ -42,16 +49,11 @@ startQuizElement.addEventListener("click", function() {
 
 //Cycles through the questions
 function getQuestion(){
-    console.log("questions:" + JSON.stringify(questions))
-    console.log("index: " + currentQuestionIndex)
   var currentQuestion = questions[currentQuestionIndex];
-    console.log("currentQuestions: " + currentQuestion)
   var titleEl = document.getElementById("question-title");
   titleEl.textContent = currentQuestion.title;
-
   var choicesEl = document.getElementById("choices");
   choicesEl.innerHTML = "";
-
   currentQuestion.choices.forEach(function(choice, i) {
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choice");
@@ -60,25 +62,41 @@ function getQuestion(){
     choiceNode.onclick = choiceClick;
     choicesEl.appendChild(choiceNode);
   });
+
+  // setTimeout(function(){
+  //   currentQuestion.setAttribute("class", "hide");
+  // }, 1000);
 }
 
 
 //Penalizes user for wrong answer
 function choiceClick(){
-    console.log("clicked on choice")
     if(this.value !== questions[currentQuestionIndex].answer){
       secondsLeft -=10;
-      var wrongEl = document.getElementById("answer-result")
-      wrongEl.removeAttribute("class");
-      wrongEl.innerText("Sorry! That's the wrong answer! Penalty: -10 seconds.")
+      //Provide response for wrong answer
+      answerResponse.removeAttribute("class");
+      answerResponse.innerText = ("Wrong!")
       if(secondsLeft <= 0){
         secondsLeft = 0
       }
     }
+    //Provide response for right answer
     else{
-    //display to user saying answer is correct
+      answerResponse.removeAttribute("class");
+      answerResponse.innerText = ("Correct!");
     }
+
+    setTimeout(function(){
+      answerResponse.setAttribute("class", "hide");
+    }, 500);
+
+    if (this.value == questions[currentQuestionIndex].answer){
+      quizScore = quizScore + 5;
+    }
+    
+
     currentQuestionIndex++;
+
     if(currentQuestionIndex === questions.length){
       endQuiz();
     }
@@ -99,4 +117,46 @@ function endQuiz(){
 
   var hideQuestions = document.getElementById("questions");
   hideQuestions.setAttribute("class", "hide");
+
+  var hideTitle = document.getElementById("title");
+  hideTitle.setAttribute("class", "hide");
+
+  var timerButtonEl = document.getElementById("timerButton");
+  timerButtonEl.setAttribute("class", "hide");
+
+  var finalScore = document.getElementById("final-score");
+  finalScore.innerText = (quizScore);
+
+  retryQuiz.addEventListener("click", function(){
+    location.href = "index.html";
+  })
 }
+
+
+//Saves Highscore
+// function inputScore(){
+//   var enterName = playerName.value.trim();
+
+//   if (enterName != ""){
+//     var playerScores = JSON.parse(window.localStorage.getItem("playerName")) || [];
+//     var newPlayerScore = {
+//       score: time,
+//       Player: username 
+//     };
+
+//     playerScores.push(newPlayerScore);
+//     window.localStorage.setItem("playerScores", JSON.stringify(playerScores));
+
+//     window.location.href = "highscores.html";
+//   }
+// };
+
+// function enterKey(event){
+//   if (event.key !== "Enter"){
+//     inputScore();
+//   }
+// }
+
+// submitBtn.onclick = inputScore();
+
+// playerName.onkeyup = enterKey();

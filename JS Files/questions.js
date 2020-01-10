@@ -45,7 +45,7 @@ var questions = [
     answer: "if(i!=5)"
   },
   {
-    title: "If we want define style for an unique element, then which css selector will we use ?",
+    title: "If we want to define style for an unique element, then which css selector will we use ?",
     choices: ["button", "class", "id", "form"],
     answer: "id"
   },

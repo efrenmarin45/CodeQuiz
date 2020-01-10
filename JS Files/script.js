@@ -5,11 +5,13 @@ var secondsLeft = 90;
 var score = 0;
 var currentQuestionIndex = 0;
 var time = questions.length * 13;
+const timerInterval = 0;
+const questionsEl = "";
 
 
 //Sets up timer
 function setTime(){
-  var timerInterval = setInterval(function() {
+  const timerInterval = setInterval(function() {
     secondsLeft--;
     timerElement.textContent = secondsLeft;
 
@@ -67,6 +69,7 @@ function choiceClick(){
     if(this.value !== questions[currentQuestionIndex].answer){
       secondsLeft -=10;
       var wrongEl = document.getElementById("answer-result")
+      wrongEl.removeAttribute("class");
       wrongEl.innerText("Sorry! That's the wrong answer! Penalty: -10 seconds.")
       if(secondsLeft <= 0){
         secondsLeft = 0
@@ -94,5 +97,6 @@ function endQuiz(){
   var finalScoreEl = document.getElementById("final-score");
   finalScoreEl.textContent = score;
 
-  questionsEl.setAttribute("class", "hide");
+  var hideQuestions = document.getElementById("questions");
+  hideQuestions.setAttribute("class", "hide");
 }

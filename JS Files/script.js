@@ -132,7 +132,7 @@ function endQuiz(){
   })
 }
 
-
+//TODO Work on highscore element and local storage
 //Saves Highscore
 // function inputScore(){
 //   var enterName = playerName.value.trim();

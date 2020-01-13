@@ -9,7 +9,7 @@ I took this on as a stepping stone to help me better understand DOM manipulation
 The project is currently still being worked on to finish out the local storage feature as well as solving out some bugs. The program itself is for the most part functional with the exception of being able to take the high score at the end and being able to fully end the quiz. 
 
 ## WIP Demo
-![Code Quiz Demo](codequiz_demo.gif)
+![Code Quiz Demo](assets/codequiz_demo.gif)
 
 No licenses. Creative purposes only. @Efrenmarin45 on GitHub.
 

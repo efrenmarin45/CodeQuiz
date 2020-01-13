@@ -6,7 +6,7 @@ var hideTimer = document.getElementById("timerButton");
 var playerName = document.getElementById("username");
 var submitBtn = document.getElementById("submit");
 
-var secondsLeft = 100;
+var secondsLeft = 1;
 var score = 0;
 var currentQuestionIndex = 0;
 var currentQuestion = "";
@@ -88,7 +88,7 @@ function choiceClick(){
 
     setTimeout(function(){
       answerResponse.setAttribute("class", "hide");
-    }, 500);
+    }, 750);
 
     if (this.value == questions[currentQuestionIndex].answer){
       quizScore = quizScore + 5;

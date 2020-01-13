@@ -1,10 +1,17 @@
 body{
     margin: 10px;
+    background-image: url("/assets/hogwarts.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    margin-top: 0px;
+    background-attachment: fixed;
 }
+
 
 .container{
     width: auto;
 }
+
 
 #title{
     border-radius: 5px;
@@ -14,12 +21,15 @@ body{
     font-weight: bold;
 }
 
+
 .timer{
     border-radius: 15px;
     padding: 5px;
     background-color: crimson;
     color: white;
 }
+
+
 #timerTitle{
     border-radius: 15px;
     padding: 5px;
@@ -30,29 +40,90 @@ body{
     border-width: 2px;
 }
 
+
+/* Start quiz button and animation */
 #start-quiz{
-    padding: 15px;
+    padding: 10px;
     font-size: 38px;
     border-width: 2px;
     border-color: black;
-    border-radius: 5px;
+    border-radius: 35px;
     justify-self:start;
     text-align: center;
+    -webkit-animation-name: start; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: start;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
-#retryQuiz{
-    border-radius: 15px;
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes start {
+    0%   {background-color: #00693E;}
+    25%  {background-color: #177245;}
+    50%  {background-color: #03C03C;}
+    100% {background-color: #00693E;}
+  }
+  
+
+/* Standard syntax */
+@keyframes start {
+    0%   {background-color: #00693E;}
+    25%  {background-color: #177245;}
+    50%  {background-color: #03C03C;}
+    100% {background-color: #00693E;}
 }
+
+
+/* Retry quiz button and animation */
+#retryQuiz{
+    padding: 7px;
+    color: whitesmoke;
+    font-size: 26px;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px;
+    background-color: slateblue;
+    animation: shake 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+
+/*  Shakes retry button from side to side  */
+@keyframes shake {
+    0% { transform: translate(15px, 0px) rotate(5deg); }
+    10% { transform: translate(-15px, 0px) rotate(-5deg); }
+    20% { transform: translate(15px, 0px) rotate(5deg); }
+    30% { transform: translate(-15px, 0px) rotate(-5deg); }
+    40% { transform: translate(15px, 0px) rotate(5deg); }
+    50% { transform: translate(-15px, 0px) rotate(-5deg); }
+    60% { transform: translate(15px, 0px) rotate(5deg); }
+    70% { transform: translate(-15px, 0px) rotate(-5deg); }
+    80% { transform: translate(15px, 0px) rotate(5deg); }
+    90% { transform: translate(-15px, 0px) rotate(-5deg); }
+    100% { transform: translate(15px, 0px) rotate(5deg); }
+}
+
 
 .choice{
     padding: 25px;
     margin: 15px;
 }
 
+
+#answer-result{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
 .wrapper{
     justify-self:start;
     text-align: center;
 }
+
 
 .intro{
     justify-self:start;
@@ -60,6 +131,15 @@ body{
     font-size: 28px;
 }
 
+
 .hide{
      display: none;
+}
+
+
+/* Breakpoint to remove background image */
+@media only screen and (max-width: 990px){
+    body{
+        background-image: none;
+    }
 }
